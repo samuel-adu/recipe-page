@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf')
+      format('woff2 supports variations'),
+    url('./assets//fonts/outfit/Outfit-VariableFont_wght.ttf')
+      format('woff2-variations');
+  font-weight: 400 700;
+}
+
+@font-face {
+  font-family: 'Young Serif';
+  src: url('./assets/fonts/young-serif/YoungSerif-Regular.ttf')
+      format('woff2 supports variations'),
+    url('./assets/fonts/young-serif/YoungSerif-Regular.ttf')
+      format('woff2-variations');
+  font-weight: 400;
+}
+
+:root {
+  --clr-nutmeg: hsl(14, 45%, 36%);
+  --clr-dark-raspberry: hsl(332, 51%, 32%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-rose-white: hsl(330, 100%, 98%);
+  --clr-eggshell: hsl(30, 54%, 90%);
+  --clr-light-grey: hsl(30, 18%, 87%);
+  --clr-wenge-brown: hsl(30, 10%, 34%);
+  --clr-dark-charcoal: hsl(24, 5%, 18%);
+
+  --ff-body: 'Outfit';
+  --ff-heading: 'Young Serif';
+  --ff-fallback: BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-sans;
+
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-regular: 400;
+}
+
+body {
+  background-color: var(--clr-eggshell);
+  font-family: var(--ff-body), var(--ff-fallback);
+  color: var(--clr-wenge-brown);
+  position: relative;
+}
+
+.container {
+  padding-inline: 2rem;
+}
+
+section {
+  margin-block: 2rem;
+}
+
+.section-divider {
+  color: var(--clr-light-grey);
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+main {
+  background-color: var(--clr-white);
+  /* margin-bottom: 1.5rem; */
+  /* padding-bottom: 1rem; */
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading), var(--ff-fallback);
+  font-weight: var(--fw-regular);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  color: var(--clr-dark-charcoal);
+}
+
+h2 {
+  font-size: 1.75rem;
+  color: var(--clr-nutmeg);
+}
+
+.prep-time {
+  background-color: var(--clr-rose-white);
+  margin-bottom: 2rem;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.prep-time p {
+  font-size: 1.25rem;
+  font-weight: var(--fw-semibold);
+  color: var(--clr-dark-raspberry);
+}
+
+ul,
+ol {
+  margin-left: 1rem;
+}
+
+li {
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+li::marker {
+  color: var(--clr-nutmeg);
+  font-weight: var(--fw-bold);
+}
+
+li span {
+  font-weight: var(--fw-bold);
+}
+
+.nutritional-table div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-block: 1rem;
+}
+
+.nutritional-table div p {
+  margin-bottom: 0;
+  width: 50%;
+}
+
+.nutritional-table .value {
+  font-weight: var(--fw-bold);
+  color: var(--clr-nutmeg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+
+  main {
+    width: 60%;
+    max-width: 735px;
+    margin: 7.5rem auto;
+    padding: 2rem 2rem 0.5rem;
+    border-radius: 20px;
+  }
+}
